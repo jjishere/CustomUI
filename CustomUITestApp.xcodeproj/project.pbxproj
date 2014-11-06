@@ -14,6 +14,7 @@
 		84EE8F381A0B4C430053369D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84EE8F371A0B4C430053369D /* Images.xcassets */; };
 		84EE8F3B1A0B4C430053369D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84EE8F391A0B4C430053369D /* LaunchScreen.xib */; };
 		84EE8F471A0B4C430053369D /* CustomUITestAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EE8F461A0B4C430053369D /* CustomUITestAppTests.m */; };
+		84EE8F6A1A0B5B040053369D /* CustomUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84EE8F691A0B5B040053369D /* CustomUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		84EE8F401A0B4C430053369D /* CustomUITestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomUITestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84EE8F451A0B4C430053369D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84EE8F461A0B4C430053369D /* CustomUITestAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomUITestAppTests.m; sourceTree = "<group>"; };
+		84EE8F691A0B5B040053369D /* CustomUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CustomUI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84EE8F6A1A0B5B040053369D /* CustomUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 		84EE8F291A0B4C430053369D /* CustomUITestApp */ = {
 			isa = PBXGroup;
 			children = (
+				84EE8F521A0B4CBD0053369D /* Framework */,
 				84EE8F2E1A0B4C430053369D /* AppDelegate.h */,
 				84EE8F2F1A0B4C430053369D /* AppDelegate.m */,
 				84EE8F311A0B4C430053369D /* ViewController.h */,
@@ -117,6 +121,14 @@
 				84EE8F451A0B4C430053369D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84EE8F521A0B4CBD0053369D /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				84EE8F691A0B5B040053369D /* CustomUI.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,8 +355,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CustomUITestApp",
+				);
 				INFOPLIST_FILE = CustomUITestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CustomUITestApp",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -353,8 +373,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CustomUITestApp",
+				);
 				INFOPLIST_FILE = CustomUITestApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CustomUITestApp",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
